@@ -1,0 +1,26 @@
+.balanceDiv {
+}
+.swapDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+
+.swapDiv h2 {
+  margin-right: 15px;
+}
+
+.swapDiv input {
+  width: auto;
+  margin-right: 15px;
+}
+
+.swapDiv select {
+  margin-right: 15px;
+}
+
+.swapDiv button {
+  padding: 5px;
+  margin: 0px 10px;
+}

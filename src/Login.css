@@ -1,0 +1,16 @@
+.loginBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginBtn {
+  width: auto;
+  height: auto;
+  font-size: 2rem;
+  padding: 10px;
+  background-color: rgba(206, 17, 240, 0.767);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

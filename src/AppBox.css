@@ -1,0 +1,16 @@
+.Appbox {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardDiv {
+  width: 250px;
+  cursor: pointer;
+  margin: 15px;
+}
+.outputBox {
+  width: 100%;
+}

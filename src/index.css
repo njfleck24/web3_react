@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --gradient: linear-gradient(
+    65deg,
+    #ff0062,
+    #ff00aa,
+    #ff00ff,
+    #c300ff,
+    #a200ff,
+    #6200ff,
+    #2600ff
+  );
+}
+
+#root {
+  display: flex;
+  background-color: rgba(14, 1, 1, 1);
+  min-height: 100vh;
+  min-width: 100vh;
+  padding: 1rem;
+}
