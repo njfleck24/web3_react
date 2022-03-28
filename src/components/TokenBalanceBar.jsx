@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './erc20balance.css'
 
 
@@ -21,12 +21,17 @@ export default function TokenBalanceBar({whitelistAddy,assets,Moralis,account,ar
             address: arkade,
             chain:"rinkeby"
         }
-        const allowance = await Moralis.Web3API.token.getTokenAllowance(options);
+        try{
+                    const allowance = await Moralis.Web3API.token.getTokenAllowance(options);
         const allowanceSC = await Moralis.Web3API.token.getTokenAllowance(optionsSC);
         let allowances = document.getElementById("allowance")
         let allowancesSC = document.getElementById("allowanceSC")
         allowances.textContent = (allowance.allowance / 10 ** 18)
         allowancesSC.textContent = (allowanceSC.allowance / 10 ** 18)
+        } catch{
+            
+        }
+
     }
 
     function createDiv(address){ 
@@ -50,6 +55,13 @@ export default function TokenBalanceBar({whitelistAddy,assets,Moralis,account,ar
 
         </div>
     }
+    useEffect(async () =>{
+
+        await callMoralis()
+        
+        
+    
+      }, [account])
     return (
         <>
         <div className='tokenNavBar'>

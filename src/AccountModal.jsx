@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import AffiliateCode from './AffiliateCode'
-export default function AccountModal({profileModal,playerCard, account, Moralis,playerState}) {
+export default function AccountModal({whitelistAddy,profileModal,playerCard, account, Moralis,playerState}) {
     const [affState, setAffState] = useState(false)
     console.log(playerState)
     console.log(playerState.aff)
@@ -34,6 +34,13 @@ export default function AccountModal({profileModal,playerCard, account, Moralis,
             <p>Affiliate Percent:</p>
             {playerState.percentage}
         </div>
+        <button onClick={async () =>{
+            let options = { abi:[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"activatePlayerCard","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newContract","type":"address"}],"name":"addCaseContract","outputs":[],"stateMutability":"nonpayable","type":"function"}],
+            contractAddress:whitelistAddy,
+            functionName: "activatePlayerCard",
+            params:{},msgValue:0}
+        await Moralis.executeFunction(options)
+        }}>Activate</button>
 
     </div></div>
   )

@@ -1,14 +1,31 @@
 .weaponCard {
   color: rgb(255, 173, 251);
-  background-color: rgb(70, 19, 67);
+  background-color: rgb(27, 7, 26);
   width: 300px;
-  padding: 10px;
+  padding: 0.8rem 0.25rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin: 10px;
   border-radius: 20px;
+}
+.upgradeBox {
+  width: 80%;
+  height: auto;
+  border: red solid 2px;
+}
+.grade-1 {
+  box-shadow: inset 1px 1px 5px 3px rgb(0, 47, 255, 0.685),
+    inset -1px -1px 5px 3px rgba(0, 47, 255, 0.685);
+}
+.grade-2 {
+  box-shadow: inset 1px 1px 5px 3px rgba(0, 255, 136, 0.685),
+    inset -1px -1px 5px 3px rgba(0, 255, 136, 0.685);
+}
+.grade-3 {
+  box-shadow: inset 1px 1px 5px 3px rgba(255, 0, 0, 0.685),
+    inset -1px -1px 5px 3px rgba(255, 0, 0, 0.685);
 }
 .weaponDiv {
   background-color: rgba(214, 110, 240, 0.712);
@@ -18,11 +35,24 @@
   border-radius: 15px;
   justify-content: center;
 }
+.weaponDiv .upgradeButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.weaponDiv button {
+  width: 50%;
+  font-size: 2rem;
+  padding: 15px;
+  cursor: pointer;
+}
 .itemRow {
   display: flex;
   justify-content: space-between;
   width: 70%;
   margin-bottom: 8px;
+  justify-content: center;
 }
 .weaponCard button {
   font-size: 1rem;

@@ -3,7 +3,7 @@ import './Navbar.css';
 import { ConnectButton } from 'web3uikit';
 import { useMoralis, useERC20Balances } from "react-moralis";
 import AccountModal from "./AccountModal"
-export default function Navbar({playerCard,Moralis,playerState, getPlayerCard, arkade}) {
+export default function Navbar({whitelistAddy, playerCard,Moralis,playerState, getPlayerCard, arkade}) {
   const { account } = useMoralis()
   const { data: assets } = useERC20Balances();
   useEffect(async () =>{console.log(assets)}, [])
@@ -29,13 +29,12 @@ export default function Navbar({playerCard,Moralis,playerState, getPlayerCard, a
         <p>Current Address:</p><p> {account}</p>
       </div>
       <div id="authBox" className='auth'>
-        <ConnectButton />
       <button onClick={ async () => {
         if(!profileModal){await getPlayerCard();}
           setProfileModal(!profileModal)
         
       }}>Account Profile</button>
-      {profileModal && <AccountModal profileModal={profileModal} playerCard={playerCard} account={account} Moralis={Moralis} playerState={playerState}/>}
+      {profileModal && <AccountModal whitelistAddy={whitelistAddy} profileModal={profileModal} playerCard={playerCard} account={account} Moralis={Moralis} playerState={playerState}/>}
       </div>
 
         

@@ -2,11 +2,17 @@ import './App.css';
 import React, {useEffect, useState} from "react";
 import Info from './Info';
 import { useMoralis } from 'react-moralis';
-import Home from './Home';
-
+import Load from './Load';
+//{Moralis && <Home  account={account} Moralis={Moralis} logout={logout}/>}</>
 const App = () => {
-  const { isAuthenticated, Moralis, account, isInitialized, authenticate, logout } = useMoralis();
-  
+  const {
+    account,
+    isAuthenticated,
+    logout,
+    authenticate,
+    Moralis,
+} = useMoralis();
+
   if (!isAuthenticated) {
     return (
     <div className="mainPage">
@@ -24,7 +30,7 @@ const App = () => {
   } else {
     return (
       <>
-      {Moralis && <Home  account={account} Moralis={Moralis} logout={logout}/>}</>
+      {Moralis && <Load account={account} Moralis={Moralis} logout={logout}/>}</>
       
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MainAppBar({getNFTOwned,layoutState, setLayoutState}) {
+export default function MainAppBar({layoutState, setLayoutState}) {
 
 
     function clicked(e){

@@ -4,7 +4,18 @@
   align-items: center;
   flex-direction: column;
 }
-
+.authBTN {
+  display: none;
+}
+.loadingScreen {
+  width: 100%;
+  height: 80vh;
+  color: aqua;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .tabs {
   display: flex;
   width: 60%;
