@@ -18,7 +18,6 @@ export default function Load({account, Moralis, logout}) {
   const [casesState, setCasesState] = useState([])
   const [weaponState, setWeaponState ] = useState([])
   const [playerState, setPlayerState ] = useState([0,0,"none"])
-  const [nftLoaded, setNftLoaded] = useState(true)
   const [loadedFull, setLoadedFull] = useState(false)
 
 
